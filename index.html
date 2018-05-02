@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Vertically And Horizontally Centering a Square</h1>
+  <section>
+    <h2>Q1: Using HTML and CSS</h2>
+    <div class="blue">
+      <div class="yellow"></div>
+    </div>
+  </section>
+  <section>
+    <h2>Q2: Using HTML5 Canvas</h2>
+    <canvas></canvas>
+  </section>
+  <script type = "text/javascript">
+        var context = document.querySelector("canvas").getContext("2d");
+        var render = function() {
+          context.canvas.width = document.documentElement.clientWidth * 0.4;
+          context.canvas.height = context.canvas.width;
+          context.fillStyle = '#ffff66';
+          context.fillRect(context.canvas.width * 0.2, context.canvas.width * 0.2, context.canvas.width * 0.6, context.canvas.width * 0.6);
+        };
+        window.addEventListener("resize", render);
+        render();
+  </script>
+</body>
+</html>
